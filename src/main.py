@@ -13,7 +13,7 @@ class Pet():
 	def xpIncrease(self, changeInXp):
 		self.xp += changeInXp
 		oldLevel = self.level
-		self.level = math.floor(self.xp/1000) # this factor may need to change
+		self.level = math.floor(self.xp/100) # this factor may need to change based on the current level
 		if self.level > oldLevel:
 			print("Level up!")
 
@@ -29,9 +29,10 @@ class Python(Pet):
 
 x = Pet()
 x.printPet()
-print(x.petType)
+print(x.type)
 
 y = Python()
 y.printPet()
-print(y.petType)
-print(y.petName)
+print(y.type)
+print(y.name)
+y.xpIncrease(100)

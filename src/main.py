@@ -4,7 +4,7 @@ class Pet():
 		self.petType = "Egg"
 	def printPet(self):
 		print()
-		print("?")
+		print("(?)")
 		print()
 
 

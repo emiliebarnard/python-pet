@@ -10,6 +10,7 @@ class Pet():
 
 class Python(Pet):
 	def __init__(self):
+		Pet.__init__(self)
 		self.petType = "Python"
 	def printPet(self):
 			print()

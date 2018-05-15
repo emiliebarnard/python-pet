@@ -1,4 +1,4 @@
-import math
+from math import floor, exp
 
 class Pet():
 	def __init__(self):
@@ -13,9 +13,13 @@ class Pet():
 	def xpIncrease(self, changeInXp):
 		self.xp += changeInXp
 		oldLevel = self.level
-		self.level = math.floor(self.xp/100) # this factor may need to change based on the current level
+		self.level = floor(self.xp/(exp(self.level) + 10)) # may need to edit this function		
+		## bug: this doesn't work properly if you go up multiple levels at once
 		if self.level > oldLevel:
+			self.levelUp()
+	def levelUp(self):
 			print("Level up!")
+			print("Congratulations, " + self.name + " is now level " + str(self.level) +"!")
 
 
 class Python(Pet):

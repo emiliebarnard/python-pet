@@ -1,4 +1,23 @@
 from math import floor, exp
+from random import choice
+from time import sleep
+
+
+def hatchPet():
+	print("\n(?)\n")
+	input("Press Enter to hatch your egg ")
+	print("Your egg is hatching...")
+	sleep(3)
+	petOptions = ["Python"]
+	petChoice = choice(petOptions)
+	# newPet = eval(petChoice + "()")
+	# newPet.printPet()
+	newPet = eval(petChoice + "()")
+	newPet.printPet()
+	print("Congratulations! Your new " + petChoice + " Pet has hatched!")
+	return newPet
+	
+	
 
 class Pet():
 	def __init__(self):

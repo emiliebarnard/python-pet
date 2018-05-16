@@ -3,6 +3,8 @@ from random import choice
 from time import sleep
 
 
+
+## move this into the Pet class
 def hatchPet():
 	print("\n(?)\n")
 	input("Press Enter to hatch your egg ")

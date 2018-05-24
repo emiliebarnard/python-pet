@@ -13,7 +13,8 @@ def main():
 	if Path("/savefile.dat").is_file():
 		print("save file found")
 	else:
-		print("No save file found. A stranger in the night hands you an egg:")
+		subjects = ["A stranger in the night", "A wild Skitty appears and"]
+		print("No save file found. " + choice(subjects) + " hands you an egg:")
 		newPet = hatchPet()
 		# newPet.printPet()
 

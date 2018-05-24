@@ -13,9 +13,19 @@ def main():
 	if Path("/savefile.dat").is_file():
 		print("save file found")
 	else:
-		subjects = ["A stranger in the night", "A wild Skitty appears and"]
+		subjects = ["A stranger in the night", "A wild Skitty appears and", "Some rando", "An unladen swallow flies by and somehow"]
 		print("No save file found. " + choice(subjects) + " hands you an egg:")
-		newPet = hatchPet()
+		
+		# newEgg = Pet()
+		# petType = newEgg.hatch()
+		# petType = Pet.hatch()
+		# ourPet = eval(petType + "()")
+		ourPet = Pet.hatch()
+		ourPet.printPet()
+		print("Congratulations! Your new " + ourPet.type + " Pet has hatched!")
+		print(ourPet.name)
+		
+		
 		# newPet.printPet()
 
 

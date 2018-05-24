@@ -4,29 +4,24 @@ from time import sleep
 
 
 
-## move this into the Pet class
-def hatchPet():
-	print("\n(?)\n")
-	input("Press Enter to hatch your egg ")
-	print("Your egg is hatching...")
-	sleep(3)
-	petOptions = ["Python"]
-	petChoice = choice(petOptions)
-	# newPet = eval(petChoice + "()")
-	# newPet.printPet()
-	newPet = eval(petChoice + "()")
-	newPet.printPet()
-	print("Congratulations! Your new " + petChoice + " Pet has hatched!")
-	return newPet
-	
-	
+## move this into the Pet class	
 
 class Pet():
 	def __init__(self):
+		# self.hatch()
 		self.name = "Jemima"
 		self.type = "Egg"
 		self.xp = 0
 		self.level = 0
+	@staticmethod
+	def hatch():
+		print("\n(?)\n")
+		input("Press Enter to hatch your egg ")
+		print("Your egg is hatching...")
+		sleep(3)
+		petOptions = ["Python"]
+		petChoice = choice(petOptions)
+		return eval(petChoice + "()")
 	def printPet(self):
 		print()
 		print("(?)")
@@ -47,6 +42,7 @@ class Python(Pet):
 	def __init__(self):
 		Pet.__init__(self)
 		self.type = "Python"
+		
 	def printPet(self):
 			print()
 			print("/\/(8)-<")

@@ -20,7 +20,7 @@ class Pet():
 		input("Press Enter to hatch your egg ")
 		print("Your egg is hatching...")
 		sleep(3)
-		pet_options = ["Python", "Cat"]
+		pet_options = ["Cat"]
 		pet_choice = choice(pet_options)
 		return eval(pet_choice + "()")
 	def print_pet(self):
@@ -46,8 +46,20 @@ class Python(Pet):
 		self.type = "Python"
 		self.display = "/\/(8)-<"
 
+  
+#   /^-——^\ 
+#   \=‘.’=/ 
+#  /       \
+# |         |
+#  \__  ___/
+#     \ \
+#      \ \
+#      / /
+#      \/
+  
+
 class Cat(Pet):
 	def __init__(self):
 		Pet.__init__(self)
 		self.type = "Cat"
-		self.display = "=^.^="
+		self.display = "    /^-——^\\\n    \\=‘.’=/\n   /       \\\n  |         |\n   \\__  ___/\n      \\ \\\n       \\ \\\n       / /\n       \\/"

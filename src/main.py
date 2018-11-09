@@ -19,7 +19,7 @@ def main():
 		# newEgg = Pet()
 		# petType = newEgg.hatch()
 		# petType = Pet.hatch()
-		# ourPet = eval(petType + "()")
+		# ourPet = eval(pet_type + "()")
 		our_pet = Pet.hatch()
 		our_pet.print_pet()
 		print("Congratulations! Your new " + our_pet.type + " Pet has hatched!")

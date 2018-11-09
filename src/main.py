@@ -20,10 +20,10 @@ def main():
 		# petType = newEgg.hatch()
 		# petType = Pet.hatch()
 		# ourPet = eval(petType + "()")
-		ourPet = Pet.hatch()
-		ourPet.printPet()
-		print("Congratulations! Your new " + ourPet.type + " Pet has hatched!")
-		print(ourPet.name)
+		our_pet = Pet.hatch()
+		our_pet.print_pet()
+		print("Congratulations! Your new " + our_pet.type + " Pet has hatched!")
+		#print(ourPet.name)
 		
 		
 		# newPet.printPet()

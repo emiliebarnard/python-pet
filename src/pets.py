@@ -19,21 +19,21 @@ class Pet():
 		input("Press Enter to hatch your egg ")
 		print("Your egg is hatching...")
 		sleep(3)
-		petOptions = ["Python"]
-		petChoice = choice(petOptions)
-		return eval(petChoice + "()")
-	def printPet(self):
+		pet_options = ["Python"]
+		pet_choice = choice(pet_options)
+		return eval(pet_choice + "()")
+	def print_pet(self):
 		print()
 		print("(?)")
 		print()
-	def xpIncrease(self, changeInXp):
-		self.xp += changeInXp
-		oldLevel = self.level
+	def xp_increase(self, change_in_xp):
+		self.xp += change_in_xp
+		old_level = self.level
 		self.level = floor(self.xp/(exp(self.level) + 10)) # may need to edit this function		
 		## bug: this doesn't work properly if you go up multiple levels at once
 		if self.level > oldLevel:
 			self.levelUp()
-	def levelUp(self):
+	def level_up(self):
 			print("Level up!")
 			print("Congratulations, " + self.name + " is now level " + str(self.level) +"!")
 
@@ -43,7 +43,7 @@ class Python(Pet):
 		Pet.__init__(self)
 		self.type = "Python"
 		
-	def printPet(self):
+	def print_pet(self):
 			print()
 			print("/\/(8)-<")
 			print()	

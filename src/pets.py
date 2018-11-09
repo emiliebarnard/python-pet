@@ -20,7 +20,7 @@ class Pet():
 		input("Press Enter to hatch your egg ")
 		print("Your egg is hatching...")
 		sleep(3)
-		pet_options = ["Python"]
+		pet_options = ["Python", "Cat"]
 		pet_choice = choice(pet_options)
 		return eval(pet_choice + "()")
 	def print_pet(self):
@@ -35,6 +35,9 @@ class Pet():
 	def level_up(self):
 			print("Level up!")
 			print("Congratulations, " + self.name + " is now level " + str(self.level) +"!")
+	def rename(self):
+		self.name = input("What would you like to name your " + self.type + "? ")
+		print("Your " + self.type + "'s new name is " + self.name)
 
 
 class Python(Pet):
@@ -42,3 +45,9 @@ class Python(Pet):
 		Pet.__init__(self)
 		self.type = "Python"
 		self.display = "/\/(8)-<"
+
+class Cat(Pet):
+	def __init__(self):
+		Pet.__init__(self)
+		self.type = "Cat"
+		self.display = "=^.^="

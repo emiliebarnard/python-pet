@@ -23,6 +23,7 @@ def main():
 		our_pet = Pet.hatch()
 		our_pet.print_pet()
 		print("Congratulations! Your new " + our_pet.type + " Pet has hatched!")
+		our_pet.rename()
 		#print(ourPet.name)
 		
 		

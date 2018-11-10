@@ -1,7 +1,8 @@
 import pickle
 from pathlib import Path
+from random import choice
 
-from pets import *
+from pets import Pet
 
 
 def main():
@@ -9,7 +10,10 @@ def main():
 	
 	# check for save file
 	
-	# later allow for different savefiles - maybe by the name of the pet - and have an interface to open up a specific one
+	# TO-DO: later allow for different savefiles
+	# maybe have the user select the save name with defaulted to the name of the pet
+	# have an interface to open up a specific one
+	
 	if Path("/savefile.dat").is_file():
 		print("save file found")
 	else:
@@ -29,8 +33,9 @@ def main():
 		
 		# newPet.printPet()
 
-
-main()
+# Only runs if this was the file run as the main module
+if __name__ == "__main__":
+	main()
 
 
 

@@ -3,9 +3,6 @@ from random import choice
 from time import sleep
 
 
-
-## move this into the Pet class	
-
 class Pet():
 	def __init__(self):
 		# self.hatch()
@@ -31,7 +28,7 @@ class Pet():
 		self.level = floor(self.xp/(exp(self.level) + 10)) # may need to edit this function		
 		## bug: this doesn't work properly if you go up multiple levels at once
 		if self.level > old_level:
-			self.levelUp()
+			self.level_up()
 	def level_up(self):
 			print("Level up!")
 			print("Congratulations, " + self.name + " is now level " + str(self.level) +"!")

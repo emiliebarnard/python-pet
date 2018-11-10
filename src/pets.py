@@ -11,14 +11,19 @@ class Pet():
 		self.xp = 0
 		self.level = 0
 		self.display = "(?)"
+	# kwargs is a dict of the keyword args passed to the function
+	# allows for testing using an optional pet= parameter
 	@staticmethod
-	def hatch():
+	def hatch(**kwargs):
 		print("\n(?)\n")
 		input("Press Enter to hatch your egg ")
 		print("Your egg is hatching...")
 		sleep(3)
-		pet_options = ["Cat"]
-		pet_choice = choice(pet_options)
+		if kwargs: # for testing:
+			pet_choice = kwargs["pet"]
+		else: # standard use case
+			pet_options = ["Python", "Cat"]
+			pet_choice = choice(pet_options)
 		return eval(pet_choice + "()")
 	def print_pet(self):
 		print("\n" + self.display + "\n")

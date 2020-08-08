@@ -1,6 +1,7 @@
 import pickle
 from pathlib import Path
 from random import choice
+from math import floor
 
 from pets import Pet
 
@@ -51,6 +52,8 @@ def hatch_egg():
 	our_pet.print_pet()
 	print("Congratulations! Your new " + our_pet.type + " Pet has hatched!")
 	our_pet.rename()
+	our_pet.set_level(1)
+	our_pet.xp_increase(1)
 	return our_pet
 
 # TO DO: also add main menu where you load/save files
@@ -67,9 +70,10 @@ def game_menu(commands, our_pet):
 		elif user_entry == "rename":
 			our_pet.rename()
 		elif user_entry == "stats":
-			print("STUB STATS")
-
-
+			our_pet.show_stats()
+		elif user_entry == "level": # for testing only
+			our_pet.level_up()
+			our_pet.show_stats()
 
 
 def show_commands(commands):

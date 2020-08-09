@@ -1,5 +1,5 @@
 # PythonPet
-A Python-based tamagotchi-like pet for your command line
+a pet powered by Python for your command line
 
 
 

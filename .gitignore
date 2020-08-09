@@ -3,3 +3,5 @@
 *.pyc
 *.pyo
 *.pyc
+*.html
+*.css
